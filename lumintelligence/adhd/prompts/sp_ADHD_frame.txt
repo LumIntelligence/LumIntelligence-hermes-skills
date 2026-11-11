@@ -1,0 +1,17 @@
+**Batch format (set by the engine; it takes precedence over any output format described above):**
+
+**Input:** A JSON object keyed by entity name. Each entity has its contextual snippets (`context`) and,
+when available, an inferred type (`inferred_type`).
+
+**How to work:**
+1. Tag each entity **independently**, as if it were the only one you were given. Never carry a topic,
+   role, or fact from one entity over to another.
+2. Never use the entity's own name (or a trivial variant of it) as a tag.
+3. Include every entity, each with at least one tag.
+
+**Output:** ONE JSON object whose keys are the entity names exactly as given and whose values are that
+entity's list of tags, e.g.:
+
+```json
+{"<entity name>": ["<tag>", "<tag>"], "<another entity name>": ["<tag>"]}
+```

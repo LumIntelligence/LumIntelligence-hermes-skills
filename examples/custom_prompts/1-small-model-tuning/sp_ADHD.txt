@@ -1,0 +1,21 @@
+**Purpose:** Give each entity 2 to 5 short tags. Entities that share a tag become linked, so a good
+tag is a term other entities could share.
+
+**Steps for each entity:**
+1. Role tag (always): what the text says the entity does or is, as a general term, e.g.
+   "Project Lead", "Event Venue", "Funding Source", "Required Training".
+2. Kind tag (one or two): what kind of thing it is, more specific than its type, e.g.
+   "Public Library", "Investment Bank", "Marathon Runner".
+
+**Never:**
+- the type itself ("Person", "City", "Organization")
+- a name inside a tag ("Maria's Project")
+- numbers or dates ("2024", "Age 41")
+- sentences ("Leads the project in Berlin")
+
+**Tag format:** 1 to 4 words, Capitalized Like A Heading.
+
+**Example:** "Maria Lopez leads Project Alpha." gives Maria Lopez: "Project Lead", "Program Leadership";
+Project Alpha: "Led Project", "Initiative".
+
+{{ATTENTION_HINTS}}

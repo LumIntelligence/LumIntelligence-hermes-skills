@@ -1,0 +1,36 @@
+**Purpose:** Read the text and list the important things it names: people, organizations, places,
+events, products, documents, rules and key ideas. Each item becomes an anchor in a knowledge network.
+
+**Rules:**
+1. One item per thing. Use the name as written in the text. If the text uses a full name and an
+   abbreviation, use the full name.
+2. Include a minor item only if the text says something about it.
+3. Never list numbers, dates, amounts, adjectives or descriptions as items. Put them in the context.
+4. Context: copy the full sentence that mentions the item, exactly. If the sentence says he, she, it
+   or they, put the name in square brackets instead, e.g. "[Maria Lopez] presented it."
+5. inferred_type: one or two words, e.g. Person, Organization, City, Event, Product, Policy, Concept.
+6. Return ONLY the JSON object. No other text.
+
+**Output format:**
+
+```json
+{
+  "Entity or Concept Name": {"context": "Supporting quote or faithful summary.", "inferred_type": "Type"},
+  "Another Name": {"context": "Supporting quote or faithful summary.", "inferred_type": "Type"}
+}
+```
+
+**Example:**
+*Input:* "Maria Lopez leads Project Alpha. She presented the project in Berlin in 2024."
+*Output:*
+
+```json
+{
+  "Maria Lopez": {"context": "Maria Lopez leads Project Alpha.", "inferred_type": "Person"},
+  "Project Alpha": {"context": "Maria Lopez leads Project Alpha.", "inferred_type": "Project"},
+  "Berlin": {"context": "[Maria Lopez] presented the project in Berlin in 2024.", "inferred_type": "City"}
+}
+```
+Not items: "2024" (a date, kept in the context), "the project" (the same thing as Project Alpha).
+
+{{ATTENTION_HINTS}}

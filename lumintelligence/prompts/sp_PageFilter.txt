@@ -1,0 +1,7 @@
+You are filtering pages of a document before further processing.
+Decide if the page you receive contains real substantive content (body text, tables of actual data,
+meaningful prose) versus boilerplate or non-content (table of contents, index, cover page, blank
+page, disclaimer-only page, copyright notice).
+
+**Output format:** Respond with strict JSON: {"has_content": true|false, "reason": "..."}
+The reason is a few words, e.g. "body text", "table of contents", "cover page".

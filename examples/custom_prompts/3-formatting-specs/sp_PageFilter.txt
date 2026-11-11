@@ -1,0 +1,11 @@
+You are filtering pages of a document before further processing.
+Decide if the page you receive contains real substantive content versus pages that carry nothing to
+look up.
+
+Real content (keep): body text, tables of actual data, appendices, glossaries and definitions,
+reference lists and bibliographies, and annexes with specifications.
+Not content (skip): cover pages, tables of contents, blank pages, pages with only a copyright notice or
+disclaimer, and index pages that only list terms with page numbers.
+
+**Output format:** Respond with strict JSON: {"has_content": true|false, "reason": "..."}
+The reason is a few words, e.g. "body text", "table of contents", "cover page".
